@@ -1,22 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { ThemeProvider } from "styled-components";
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./components/Buttons";
-import { GlobalStyle } from "./utils";
+import { GlobalStyle, darkTheme, defaultTheme } from "./utils";
 
-const tempMargin = { margin: "15px" };
-const App = () => (
-  <div>
-    <div style={tempMargin}>
-      <PrimaryButton modifiers={["small", "success"]}>Primary Button</PrimaryButton>
-    </div>
-    <div style={tempMargin}>
-      <SecondaryButton modifiers={["large", "warningSecondary"]}>Secondary Button</SecondaryButton>
-    </div>
-    <div style={tempMargin}>
-      <TertiaryButton modifiers={["error"]}>Tertiary Button</TertiaryButton>
-    </div>
-    <GlobalStyle />
-  </div>
-);
+const App = () => {
+  const [useDarkTheme, setDarkTheme] = useState(false);
+  const wrapperStyle = {
+    background: useDarkTheme ? defaultTheme.primaryColor : darkTheme.primaryColor,
+    width: "100vw",
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
+  };
+
+  return (
+    <ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
+      <button
+        style={{ margin: "0 16px 24px", padding: "8px", background: "none" }}
+        onClick={() => setDarkTheme(true)}
+      >
+        Dark Theme
+      </button>
+
+      <button
+        style={{ margin: "0 16px 24px", padding: "8px", background: "none" }}
+        onClick={() => setDarkTheme(false)}
+      >
+        Default Theme
+      </button>
+      <div style={wrapperStyle}>
+        <PrimaryButton>Primary Button</PrimaryButton>
+        <SecondaryButton>Secondary Button</SecondaryButton>
+        <TertiaryButton>Tertiary Button</TertiaryButton>
+      </div>
+      <GlobalStyle />
+    </ThemeProvider>
+  );
+};
 
 ReactDOM.render(<App />, document.querySelector("#root"));

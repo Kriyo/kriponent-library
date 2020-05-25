@@ -26,3 +26,29 @@ export const defaultTheme = {
     successColorActive: success[300],
   },
 };
+
+export const darkTheme = {
+  defaultShadow,
+  disabled: neutral[400],
+  primaryColor: neutral[100],
+  primaryColorHover: neutral[200],
+  primaryColorActive: neutral[100],
+  primaryColorFocus: neutral[100],
+  textColorOnPrimary: primary[100],
+  textColor: neutral[600],
+  textColorInverted: neutral[100],
+  textOnDisabled: neutral[300],
+  primaryFont,
+  secondaryFont,
+  status: {
+    warningColor: warning[100],
+    warningColorHover: warning[200],
+    warningColorActive: warning[300],
+    errorColor: error[100],
+    errorColorHover: error[200],
+    errorColorActive: error[300],
+    successColor: success[100],
+    successColorHover: success[200],
+    successColorActive: success[300],
+  },
+};
