@@ -1,0 +1,23 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { action } from "@storybook/addon-actions";
+import { withKnobs, boolean} from '@storybook/addon-knobs'
+import { SignUpModal } from "./Modal";
+
+<Meta title='Design System|Modals' component={SignUpModal} />
+
+# Modals
+
+Modals are used display layered information within an application.
+
+## Usage
+
+Modals are used display layered information within an application.
+
+## The Lone Modal
+
+I'm lazy and only made one modal so far
+<Preview withToolbar>
+  <Story name='modal'>
+    <SignUpModal showModal={boolean('Display', true)}>Hello world</SignUpModal> 
+  </Story>
+</Preview>
