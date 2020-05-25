@@ -1,7 +1,7 @@
-import SignUp from "./illustrations/sign_up.svg";
 import Login from "./illustrations/login.svg";
-
-export const illustrations = {
-  SignUp,
+import SignUp from "./illustrations/sign_up.svg";
+export * from "./icons/CloseIcon";
+export const Illustrations = {
   Login,
+  SignUp,
 };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { applyStyleModifiers } from "styled-components-modifiers";
-import { defaultTheme, typeScale } from "../utils";
+import { typeScale } from "../utils";
 
 const BUTTON_MODIFIERS = {
   small: () => `
@@ -135,5 +135,3 @@ export const TertiaryButton = styled(Button)`
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
-
-export default PrimaryButton;

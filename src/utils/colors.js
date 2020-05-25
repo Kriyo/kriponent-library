@@ -34,3 +34,4 @@ export const warning = {
 };
 
 export const defaultShadow = "0px 4px 4px rgba(0, 0, 0, 0.25)";
+export const modalShadow = "0 5px 16px rgba(0, 0, 0, 0.2)";

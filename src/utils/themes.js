@@ -1,9 +1,12 @@
-import { defaultShadow, primary, neutral, success, error, warning } from "./colors";
+import { defaultShadow, modalShadow, primary, neutral, success, error, warning } from "./colors";
 import { primaryFont, secondaryFont } from "./typography";
 
 export const defaultTheme = {
   defaultShadow,
+  modalShadow,
   disabled: neutral[400],
+  formElementBackground: neutral[100],
+  textOnFormElementBackground: neutral[600],
   primaryColor: primary[100],
   primaryColorHover: primary[200],
   primaryColorActive: primary[100],
@@ -29,7 +32,10 @@ export const defaultTheme = {
 
 export const darkTheme = {
   defaultShadow,
+  modalShadow,
   disabled: neutral[400],
+  formElementBackground: primary[100],
+  textOnFormElementBackground: neutral[100],
   primaryColor: neutral[100],
   primaryColorHover: neutral[200],
   primaryColorActive: neutral[100],
