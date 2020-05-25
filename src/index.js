@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
-import { SignUpModal } from "./components";
+import { PrimaryButton, SignUpModal } from "./components";
 import { GlobalStyle, darkTheme, defaultTheme } from "./utils";
 
 const App = () => {
   const [useDarkTheme, setDarkTheme] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
   const wrapperStyle = {
     background: useDarkTheme ? defaultTheme.primaryColor : darkTheme.primaryColor,
     width: "100vw",
@@ -14,24 +16,15 @@ const App = () => {
     alignItems: "center",
     justifyContent: "space-around",
   };
-
+  const currentTheme = useDarkTheme ? "Dark" : "Normal";
   return (
     <ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
-      <button
-        style={{ margin: "0 16px 24px", padding: "8px", background: "none" }}
-        onClick={() => setDarkTheme(true)}
-      >
-        Dark Theme
-      </button>
+      <PrimaryButton onClick={() => setDarkTheme(!useDarkTheme)}>Toggle Theme</PrimaryButton>
+      <PrimaryButton onClick={() => setShowModal(!showModal)}>Toggle Modal</PrimaryButton>
+      <p>Current Theme: {currentTheme}</p>
 
-      <button
-        style={{ margin: "0 16px 24px", padding: "8px", background: "none" }}
-        onClick={() => setDarkTheme(false)}
-      >
-        Default Theme
-      </button>
       <div style={wrapperStyle}>
-        <SignUpModal />
+        <SignUpModal showModal={showModal} setShowModal={setShowModal} />
       </div>
       <GlobalStyle />
     </ThemeProvider>
