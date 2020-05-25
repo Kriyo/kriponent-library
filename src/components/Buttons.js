@@ -52,6 +52,7 @@ export const SecondaryButton = styled(Button)`
 
   &:disabled {
     color: ${defaultTheme.textOnDisabled};
+    background: none;
     border: 1px solid ${defaultTheme.disabled};
   }
 `;
@@ -67,6 +68,7 @@ export const TertiaryButton = styled(Button)`
 
   &:disabled {
     color: ${defaultTheme.textOnDisabled};
+    background: none;
   }
 `;
 
