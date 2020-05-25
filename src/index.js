@@ -3,11 +3,18 @@ import ReactDOM from "react-dom";
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./components/Buttons";
 import { GlobalStyle } from "./utils";
 
+const tempMargin = { margin: "15px" };
 const App = () => (
   <div>
-    <PrimaryButton>Primary Button</PrimaryButton>
-    <SecondaryButton>Secondary Button</SecondaryButton>
-    <TertiaryButton>Tertiary Button</TertiaryButton>
+    <div style={tempMargin}>
+      <PrimaryButton>Primary Button</PrimaryButton>
+    </div>
+    <div style={tempMargin}>
+      <SecondaryButton>Secondary Button</SecondaryButton>
+    </div>
+    <div style={tempMargin}>
+      <TertiaryButton>Tertiary Button</TertiaryButton>
+    </div>
     <GlobalStyle />
   </div>
 );
