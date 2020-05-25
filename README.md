@@ -6,13 +6,11 @@ Yet another ReactJS application for a basic design system that continued from a 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Styled components
+[Styled components](https://github.com/styled-components/)
 
-Styled components modifiers
+[Polished JS](https://polished.js.org/)
 
-Polished JS
-
-Storybook
+[Storybook](https://storybook.js.org/)
 
 ## Designs
 
@@ -22,6 +20,10 @@ Storybook
 
 A very quickly thrown together monochromatic palette I randomised via [Coolors](https://www.coolors.co)
 ![alt text](https://i.imgur.com/K9Zr8ih.png "Color Palette via I randomised via Coolors")
+
+## Style Guide
+
+I deployed a live version of storybook using [Netlify](https://www.netlify.com/) and that can be found [here](https://kri-styleguide.netlify.app/)
 
 ## Available Scripts
 
