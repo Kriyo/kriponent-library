@@ -7,13 +7,13 @@ const tempMargin = { margin: "15px" };
 const App = () => (
   <div>
     <div style={tempMargin}>
-      <PrimaryButton disabled>Primary Button</PrimaryButton>
+      <PrimaryButton modifiers='small'>Primary Button</PrimaryButton>
     </div>
     <div style={tempMargin}>
-      <SecondaryButton disabled>Secondary Button</SecondaryButton>
+      <SecondaryButton modifiers={["large"]}>Secondary Button</SecondaryButton>
     </div>
     <div style={tempMargin}>
-      <TertiaryButton disabled>Tertiary Button</TertiaryButton>
+      <TertiaryButton>Tertiary Button</TertiaryButton>
     </div>
     <GlobalStyle />
   </div>

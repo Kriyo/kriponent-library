@@ -4,6 +4,8 @@ React create app
 
 Styled components
 
+Styled components modifiers
+
 Polished JS
 
 [Figma](https://www.figma.com/file/SoiBByA0ogjwcCzhL0nmKm/Kri?node-id=2%3A178)
