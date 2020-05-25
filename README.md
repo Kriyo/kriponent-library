@@ -1,6 +1,12 @@
 Uses:
+
 React create app
+
 Styled components
+
+Polished JS
+
+[Figma](https://www.figma.com/file/SoiBByA0ogjwcCzhL0nmKm/Kri?node-id=2%3A178)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
