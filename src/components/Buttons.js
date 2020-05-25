@@ -11,6 +11,52 @@ const BUTTON_MODIFIERS = {
     font-size: ${typeScale.h5};
     padding: 16px 24px;
   `,
+  warning: () => `
+    background-color: ${defaultTheme.status.warningColor};
+    color: ${defaultTheme.textColorInverted};
+
+    &:hover, &:focus {
+      background-color: ${defaultTheme.status.warningColorHover};
+      outline: 2px solid ${defaultTheme.status.warningColorHover};
+    }
+
+    &:active {
+      background-color: ${defaultTheme.status.warningColorActive};
+    }
+  `,
+  warningSecondary: () => `
+    background: none;
+    border-color: ${defaultTheme.status.warningColor};
+
+    &:hover, &:focus { {
+      background: none;
+      color: ${defaultTheme.primaryColor};
+      outline: 2px solid ${defaultTheme.status.warningColorHover};
+    }
+  `,
+  success: () => `
+    background-color: ${defaultTheme.status.successColor};
+
+    &:hover, &:focus {
+      color: ${defaultTheme.textColorInverted};
+      background-color: ${defaultTheme.status.successColorHover};
+    }
+    &:active: {
+      background-color: ${defaultTheme.status.successColorActive};
+    }
+  `,
+  error: () => `
+    background-color: ${defaultTheme.status.errorColor};
+    color: ${defaultTheme.textColorInverted};
+
+    &:hover, &:focus {
+      color: ${defaultTheme.textColorInverted};
+      background-color: ${defaultTheme.status.errorColorHover};
+    }
+    &:active: {
+      background-color: ${defaultTheme.status.errorColorActive};
+    }
+  `,
 };
 
 const Button = styled.button`

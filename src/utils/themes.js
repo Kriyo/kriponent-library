@@ -1,4 +1,4 @@
-import { defaultShadow, primary, neutral } from "./colors";
+import { defaultShadow, primary, neutral, success, error, warning } from "./colors";
 import { primaryFont, secondaryFont } from "./typography";
 
 export const defaultTheme = {
@@ -14,4 +14,15 @@ export const defaultTheme = {
   textOnDisabled: neutral[300],
   primaryFont,
   secondaryFont,
+  status: {
+    warningColor: warning[100],
+    warningColorHover: warning[200],
+    warningColorActive: warning[300],
+    errorColor: error[100],
+    errorColorHover: error[200],
+    errorColorActive: error[300],
+    successColor: success[100],
+    successColorHover: success[200],
+    successColorActive: success[300],
+  },
 };
